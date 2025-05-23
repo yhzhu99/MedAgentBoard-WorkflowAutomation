@@ -78,7 +78,7 @@ This benchmark evaluates three multi-agent frameworks:
 ### Requirements
 - Python 3.10 or higher
 
-### Reproducing Task Generation
+## Reproducing Task Generation
 1. Navigate to `generate/` directory:
 ```bash
 cd generate/
