@@ -41,36 +41,80 @@ This benchmark evaluates three multi-agent frameworks:
 
 
 ## Repository Structure
-```
+<!-- ```
 .
 ├── task100.json # Generated benchmark tasks (100 tasks)
 ├── generate/
 │  ├── generate.py # Task generation script
-│  └── prompt.py # Prompt templates for task construction
+│  └── prompt.py 
 │
 ├── inference/ # Implementation of different frameworks
-│  ├── openmanus/ # OpenManus framework implementation
-│  ├── owl/ # Owl framework implementation
-│  ├── single_llm/ # Single LLM baseline
-│  └── smolagents/ # SmolAgents implementation
+│  ├── openmanus/ 
+│  │   └── generate.py # OpenManus framework implementation
+│  ├── owl/
+│  │   ├── generate.py # Owl framework implementation
+│  │   └── prompt.py
+│  ├── single_llm/
+│  │   ├── generate.py # Single LLM baseline
+│  │   └── prompt.py
+│  └── smolagents/
+│      └── generate.py # SmolAgents implementation
 │
 ├── results/
 │  └── Single_LLM_code.json # Generated code from Single LLM baseline
 │
 ├── evaluation/
 │  ├── Chinese_version/ # Chinese evaluation results
-│  │   ├── Evaluator_A/
-│  │   ├── Evaluator_B/
-│  │   ├── Evaluator_C/
+│  │   ├── A.csv
+│  │   ├── B.csv
+│  │   ├── C.csv
 │  │   └── Merged.json
 │  │
 │  └── English_version/ # English evaluation results
-│      ├── Evaluator_A/
-│      ├── Evaluator_B/
-│      ├── Evaluator_C/
+│      ├── A.json
+│      ├── B.json
+│      ├── C.json
 │      └── Merged.json
 │
 └── (Additional model outputs available in GitHub Releases)
+``` -->
+```
+.
+├── evaluation/
+│   ├── Chinese_version/ # Chinese evaluation results
+│   │   ├── A.csv
+│   │   ├── B.csv
+│   │   ├── C.csv
+│   │   └── Merged.json
+│   │
+│   └── English_version/ # English evaluation results
+│       ├── A.json
+│       ├── B.json
+│       ├── C.json
+│       └── Merged.json
+│
+├── generate/
+│   ├── generate.py # Task generation script
+│   └── prompt.py # Prompt templates
+│
+├── inference/ # Framework implementations
+│   ├── openmanus/ # OpenManus framework
+│   │   └── generate.py
+│   ├── owl/ # Owl framework
+│   │   ├── generate.py
+│   │   └── prompt.py
+│   ├── single_llm/ # Single LLM baseline
+│   │   ├── generate.py
+│   │   └── prompt.py
+│   └── smolagents/ # SmolAgents framework
+│       └── generate.py
+│
+├── results/
+│   └── Single_LLM_code.json # Single LLM generated code
+│
+├── task100.json # Benchmark tasks (100 total)
+│
+└── (Additional outputs in GitHub Releases)
 ```
 
 ## Getting Started
